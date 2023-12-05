@@ -1,0 +1,141 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
+}
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa);
+}
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+.card {
+  padding: 2em;
+}
+
+.read-the-docs {
+  color: #888;
+}
+/* ---------------------------------------------- */
+.main-content {
+  display: flex;
+  flex-direction: column;
+}
+.form {
+  position: relative;
+  margin: 3rem auto;
+  align-items: center;
+}
+
+.tasks-field {
+  position: absolute;
+  justify-content: center;
+  background-color: #c2d0c1;
+  color: #6c4a4b;
+  font-weight: 500;
+  overflow: auto;
+  max-height: 60vh;
+  width: 60%;
+  top: 11rem;
+  left: 16rem;
+  padding: 1rem;
+  border-radius: 1rem;
+}
+
+.not-completed {
+  display: flex;
+  gap: 3rem;
+  text-decoration: line-through;
+}
+
+.completed {
+  text-decoration: none;
+  display: flex;
+  gap: 3rem;
+}
+
+.input-field {
+  background: #e8e8e8;
+  color: #6c4a4b;
+  padding: 10px;
+  padding-left: 20px;
+  border-style: none;
+  height: 2rem;
+  width: 40rem;
+  font-size: 14px;
+  border-radius: 50px;
+  box-shadow: inset 6px 6px 6px #cbced1, inset -6px -6px 6px white;
+}
+
+.submit-btn {
+  background: #875d5e;
+  border: 0;
+  color: white;
+  padding: 15px;
+  border-radius: 20px;
+  transition: 0.4s ease;
+  margin-left: 1.2rem;
+}
+
+.submit-btn:hover {
+  background: #bc9798;
+  cursor: pointer;
+}
+
+.tasks-field {
+}
+
+.single-task {
+  width: 70%;
+}
+
+.delete-btn {
+  background-color: #c2d0c1;
+  border-style: none;
+  padding: 0.5rem;
+  width: 3rem;
+  color: #bc9798;
+  font-size: 1.3rem;
+}
+
+.delete-btn:hover {
+  transform: scale(1.2);
+  color: #875d5e;
+}
+
+.complete-btn {
+  background-color: #c2d0c1;
+  border-style: none;
+  padding: 0.5rem;
+  width: 3rem;
+  color: #bc9798;
+  font-size: 1.3rem;
+}
+
+.complete-btn:hover {
+  transform: scale(1.3);
+}
