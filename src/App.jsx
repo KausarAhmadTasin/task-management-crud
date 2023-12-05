@@ -1,7 +1,5 @@
 import { useReducer } from "react";
-import "./App.css";
-import Task from "./components/TaskItem";
-import { reducer } from "./utils/reducer";
+import { reducer } from "./utils/Reducer";
 import AddTaskForm from "./components/AddTaskForm";
 import TaskList from "./components/TaskList";
 
