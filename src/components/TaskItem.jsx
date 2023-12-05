@@ -2,19 +2,14 @@ import { RiDeleteBack2Fill } from "react-icons/ri";
 import { FcCheckmark } from "react-icons/fc";
 import { useState } from "react";
 
-const TaskItem = ({ todo, deleteTask }) => {
-  const [completed, setCompleted] = useState(false);
-  const { id, task } = todo;
-
-  const checkClick = () => {
-    setCompleted(!completed);
-  };
-
+const TaskItem = ({ todo, deleteTask, isComplete }) => {
+  const { id, task, completed } = todo;
+  console.log(todo);
   return (
     <>
       <li className={completed ? "not-completed" : "completed"}>
         {" "}
-        <button onClick={() => checkClick()} className="complete-btn">
+        <button onClick={() => isComplete(id)} className="complete-btn">
           <FcCheckmark />
         </button>
         <div className="single-task">{task}</div>
