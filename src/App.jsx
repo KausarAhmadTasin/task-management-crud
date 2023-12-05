@@ -2,6 +2,7 @@ import { useReducer } from "react";
 import AddTaskForm from "./components/AddTaskForm";
 import TaskList from "./components/TaskList";
 import { reducer } from "./utils/Reducer";
+import "./App.css";
 
 const initialState = {
   tasks: [],
