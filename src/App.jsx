@@ -1,26 +1,16 @@
 import { useReducer } from "react";
 import "./App.css";
-import Task from "./Task";
+import Task from "./components/TaskItem";
+import { reducer } from "./utils/reducer";
+import AddTaskForm from "./components/AddTaskForm";
+import TaskList from "./components/TaskList";
 
 const initialState = {
   tasks: [],
 };
 
-const ADD_TASK = "ADD_TASK";
-const DELETE_TASK = "DELETE_TASK";
-
-const reducer = (state, action) => {
-  const { type, payload } = action;
-
-  switch (type) {
-    case ADD_TASK:
-      return { tasks: [...state.tasks, payload] };
-    case DELETE_TASK:
-      return { tasks: state.tasks.filter((task) => task.id !== payload) };
-    default:
-      return state;
-  }
-};
+export const ADD_TASK = "ADD_TASK";
+export const DELETE_TASK = "DELETE_TASK";
 
 function App() {
   const [state, dispatch] = useReducer(reducer, initialState);
@@ -46,30 +36,9 @@ function App() {
   return (
     <>
       <div className="main-content">
-        <form className="form" action="submit" onSubmit={handleSubmit}>
-          <input
-            type="text"
-            name="taskInput"
-            className="input-field"
-            placeholder="Task..."
-          />
-          <input
-            type="submit"
-            name="submit-btn"
-            id="submit-btn"
-            value="Add Task"
-            className="submit-btn"
-          />
-        </form>
-
+        <AddTaskForm handleSubmit={handleSubmit} />
         <div className="tasks-field">
-          {state.tasks.length <= 0
-            ? "No task added yet!"
-            : state.tasks.map((text) => (
-                <ul key={text.id}>
-                  <Task todo={text} deleteTask={deleteTask} />
-                </ul>
-              ))}
+          <TaskList state={state} deleteTask={deleteTask} />
         </div>
       </div>
     </>

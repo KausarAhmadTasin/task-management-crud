@@ -2,7 +2,7 @@ import { RiDeleteBack2Fill } from "react-icons/ri";
 import { FcCheckmark } from "react-icons/fc";
 import { useState } from "react";
 
-const Task = ({ todo, deleteTask }) => {
+const TaskItem = ({ todo, deleteTask }) => {
   const [completed, setCompleted] = useState(false);
   const { id, task } = todo;
 
@@ -30,4 +30,4 @@ const Task = ({ todo, deleteTask }) => {
   );
 };
 
-export default Task;
+export default TaskItem;
