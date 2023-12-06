@@ -9,7 +9,7 @@ import {
 export const reducer = (state, action) => {
   const { type, payload } = action;
   const { taskId, editText } = payload;
-  console.log(state);
+
   switch (type) {
     case ADD_TASK:
       return { tasks: [...state.tasks, payload] };
@@ -23,6 +23,7 @@ export const reducer = (state, action) => {
       );
       return { tasks: updatedTasks };
     }
+
     case TOGGLE_COMPLETED: {
       const updatedTasks = state.tasks.map((task) =>
         task.id === payload ? { ...task, completed: !task.completed } : task
