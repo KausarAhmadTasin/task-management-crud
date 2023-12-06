@@ -1,4 +1,3 @@
-/* eslint-disable react/prop-types */
 import { RiDeleteBack2Fill } from "react-icons/ri";
 import { FcCheckmark } from "react-icons/fc";
 import { CiEdit } from "react-icons/ci";

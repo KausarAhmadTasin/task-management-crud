@@ -1,7 +1,6 @@
 import TaskItem from "./TaskItem";
 
 const TaskList = ({ state, deleteTask, isComplete, isEditable, saveEdit }) => {
-  // console.log(state.tasks);
   return state.tasks.length <= 0
     ? "No task added yet!"
     : state.tasks.map((text) => (

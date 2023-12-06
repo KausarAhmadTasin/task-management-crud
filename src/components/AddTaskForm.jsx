@@ -1,5 +1,3 @@
-/* eslint-disable react/prop-types */
-
 const AddTaskForm = ({ handleSubmit }) => {
   return (
     <form className="form" action="submit" onSubmit={handleSubmit}>
