@@ -28,6 +28,7 @@ const TaskItem = ({ todo, deleteTask, isComplete, isEditable, saveEdit }) => {
               placeholder="Edit..."
               value={editedTask}
               onChange={handleEdit}
+              autoFocus
             />
             <button
               className="submit-btn"
