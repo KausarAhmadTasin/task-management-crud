@@ -11,6 +11,8 @@ const initialState = {
 export const ADD_TASK = "ADD_TASK";
 export const DELETE_TASK = "DELETE_TASK";
 export const TOGGLE_COMPLETED = "TOGGLE_COMPLETED";
+export const IS_EDITABLE = "IS_EDITABLE";
+export const EDITING = "EDITION";
 
 function App() {
   const [state, dispatch] = useReducer(
@@ -31,6 +33,7 @@ function App() {
         id: Date.now(),
         task: e.target.taskInput.value,
         completed: false,
+        editable: false,
       };
       dispatch({ type: ADD_TASK, payload: taskObj });
       e.target.taskInput.value = "";
@@ -45,6 +48,14 @@ function App() {
     dispatch({ type: TOGGLE_COMPLETED, payload: taskId });
   };
 
+  const isEditable = (taskId) => {
+    dispatch({ type: IS_EDITABLE, payload: taskId });
+  };
+
+  const saveEdit = (editText, taskId) => {
+    dispatch({ type: EDITING, payload: { editText, taskId } });
+  };
+
   return (
     <>
       <div className="main-content">
@@ -54,6 +65,8 @@ function App() {
             state={state}
             deleteTask={deleteTask}
             isComplete={isComplete}
+            isEditable={isEditable}
+            saveEdit={saveEdit}
           />
         </div>
       </div>

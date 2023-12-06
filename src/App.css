@@ -61,7 +61,7 @@
   max-height: 60vh;
   width: 60%;
   top: 11rem;
-  left: 16rem;
+  left: 15rem;
   padding: 1rem;
   border-radius: 1rem;
 }
@@ -89,6 +89,20 @@
   font-size: 14px;
   border-radius: 50px;
   box-shadow: inset 6px 6px 6px #cbced1, inset -6px -6px 6px white;
+  outline: none;
+}
+.input-field-inside {
+  background: #e8e8e8;
+  color: #6c4a4b;
+  padding: 10px;
+  padding-left: 20px;
+  border-style: none;
+  height: 1.2rem;
+  width: 30rem;
+  font-size: 14px;
+  border-radius: 50px;
+  box-shadow: inset 6px 6px 6px #cbced1, inset -6px -6px 6px white;
+  outline: none;
 }
 
 .submit-btn {
@@ -99,6 +113,7 @@
   border-radius: 20px;
   transition: 0.4s ease;
   margin-left: 1.2rem;
+  outline: none;
 }
 
 .submit-btn:hover {
@@ -106,7 +121,7 @@
   cursor: pointer;
 }
 
-.single-task {
+#single-task {
   width: 70%;
 }
 
@@ -117,6 +132,20 @@
   width: 3rem;
   color: #bc9798;
   font-size: 1.3rem;
+}
+
+.edit-btn {
+  background-color: #c2d0c1;
+  border-style: none;
+  width: 3rem;
+  color: #875d5e;
+  font-size: 1.3rem;
+  font-weight: bold;
+  outline: none;
+}
+
+.edit-btn:hover {
+  transform: scale(1.2);
 }
 
 .delete-btn:hover {
