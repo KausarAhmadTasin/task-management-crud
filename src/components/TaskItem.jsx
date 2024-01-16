@@ -14,7 +14,7 @@ const TaskItem = ({ todo, deleteTask, isComplete, isEditable, saveEdit }) => {
 
   return (
     <>
-      <li className={completed ? "not-completed" : "completed"}>
+      <li className="flex">
         <button onClick={() => isComplete(id)} className="complete-btn">
           <FcCheckmark />
         </button>
@@ -37,7 +37,12 @@ const TaskItem = ({ todo, deleteTask, isComplete, isEditable, saveEdit }) => {
             </button>
           </>
         ) : (
-          <div id="single-task">{task}</div>
+          <div
+            className={completed ? "not-completed" : "completed"}
+            id="single-task"
+          >
+            {task}
+          </div>
         )}
         <button
           title="Edit Task"
