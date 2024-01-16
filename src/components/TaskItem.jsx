@@ -15,9 +15,19 @@ const TaskItem = ({ todo, deleteTask, isComplete, isEditable, saveEdit }) => {
   return (
     <>
       <li className="flex">
-        <button onClick={() => isComplete(id)} className="complete-btn">
-          <FcCheckmark />
-        </button>
+        {editable ? (
+          <button
+            onClick={() => saveEdit(editedTask, id)}
+            className="complete-btn"
+          >
+            <FcCheckmark />
+          </button>
+        ) : (
+          <button onClick={() => isComplete(id)} className="complete-btn">
+            <FcCheckmark />
+          </button>
+        )}
+
         {editable ? (
           <>
             <input
