@@ -5,7 +5,8 @@ const AddTaskForm = ({ handleSubmit }) => {
         type="text"
         name="taskInput"
         className="input-field"
-        placeholder="Task..."
+        placeholder="Add what to do..."
+        autoFocus
       />
       <input
         type="submit"
